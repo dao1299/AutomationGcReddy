@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 31.077 s <<< FAILURE! - in TestSuite
+TC_05(test.AdminLoginTest)  Time elapsed: 11.377 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Logoff']' (tried for 10 second(s) with 100 milliseconds interval)
+	at test.AdminLoginTest.TC_05(AdminLoginTest.java:68)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Logoff']"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [96cd080335af9c3d241773ae68a1c1a9, findElement {using=xpath, value=//a[text()='Logoff']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\THINKP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59345}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.137.1:4444/ses..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 96cd080335af9c3d241773ae68a1c1a9
+	at test.AdminLoginTest.TC_05(AdminLoginTest.java:68)
+
+TC_07(test.AdminLoginTest)  Time elapsed: 1.903 s  <<< FAILURE!
+java.lang.AssertionError: expected [ Error: Invalid administrator login attempt.] but found [ Error: The maximum number of login attempts has been reached. Please try again in 5 minutes.]
+	at test.AdminLoginTest.TC_07(AdminLoginTest.java:92)
+
